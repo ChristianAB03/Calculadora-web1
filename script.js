@@ -58,9 +58,38 @@ const calculate = () => {
         result = 'Error';
     }
 
+// El único lugar donde veo que se podría poner
+// Template Strings sería en los resultados, sin embargo,
+// en una calculadora no se vería correcto o como normalmente es. 
+// Por ejemplo, "La suma de 'numA' + 'numB' es 'resultado'",   
+// de igual manera le dejo el código de cómo quedaría:
+
+/*     let result;
+    switch (operator) {
+      case '+':
+        result = suma(numA, numB);
+        display.value = 'La suma de ${numA} + ${numB} es ${result};
+        break;
+      case '-':
+        result = resta(numA, numB);
+        display.value = 'La resta de ${numA} - ${numB} es ${result};  
+        break;
+      case '*':
+        result = multiplicacion(numA, numB);
+        display.value = 'La multiplicación de ${numA} * ${numB} es ${result};
+        break;
+      case '/':
+        result = division(numA, numB);
+        display.value = 'La división de ${numA} ÷ ${numB} es ${result};
+        break;
+      default:
+        result = 'Error';
+    }
+*/
     // Mostrar el resultado
     display.value = result;
   } catch (error) {
     display.value = 'Error';
   }
 };
+
